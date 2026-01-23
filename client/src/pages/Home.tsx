@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { useSoundContext } from "@/contexts/SoundContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { JellybodAvatar } from "@/components/JellybodAvatar";
 import { EmpathyMatrix } from "@/components/EmpathyMatrix";
@@ -19,6 +21,10 @@ const colors = {
 };
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const [currentPhase, setCurrentPhase] = useState<QuestPhase>("intro");
   const [empathyCharge, setEmpathyCharge] = useState(0);
   const [logicCharge, setLogicCharge] = useState(0);
