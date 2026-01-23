@@ -162,16 +162,22 @@ export const Spacing = {
 
 /**
  * Border radius scale
+ * These values use calc() expressions to maintain a consistent relationship 
+ * with the base radius (1rem). The base radius is typically defined in CSS
+ * as a CSS variable (--radius), usually set to 1rem (16px) at minimum.
+ * 
+ * Note: These calc expressions assume a minimum base radius of 1rem.
+ * If using a smaller base radius, consider using fixed values instead.
  */
 export const BorderRadius = {
   none: "0",
-  sm: "calc(1rem - 4px)",
-  md: "calc(1rem - 2px)",
-  lg: "1rem",
-  xl: "calc(1rem + 4px)",
-  "2xl": "1.5rem",
-  "3xl": "2rem",
-  full: "9999px",
+  sm: "calc(1rem - 4px)",   // ~12px when base is 16px
+  md: "calc(1rem - 2px)",   // ~14px when base is 16px
+  lg: "1rem",               // 16px base radius
+  xl: "calc(1rem + 4px)",   // ~20px when base is 16px
+  "2xl": "1.5rem",          // 24px
+  "3xl": "2rem",            // 32px
+  full: "9999px",           // Fully rounded
 } as const;
 
 /**
