@@ -9,16 +9,13 @@ import { PhaseIndicator } from "@/components/PhaseIndicator";
 import { DataStreamVisualizer } from "@/components/DataStreamVisualizer";
 import { JellyPrimeDialog } from "@/components/JellyPrimeDialog";
 import { QuestObjective } from "@/components/QuestObjective";
+import type { QuestPhase, DataColor } from "@chromatic-concordance/shared-core";
+import { SpudverseColors } from "@chromatic-concordance/shared-core";
 
-export type QuestPhase = "intro" | "potato" | "schultz" | "synapse" | "complete";
-export type DataColor = "empathy" | "logic" | "concordance" | "neutral";
+// Re-export for backwards compatibility with existing components
+export type { QuestPhase, DataColor };
 
-const colors = {
-  empathy: "oklch(0.75 0.2 155)",
-  logic: "oklch(0.75 0.15 85)",
-  concordance: "oklch(0.7 0.15 180)",
-  jellybod: "oklch(0.65 0.2 290)",
-};
+const colors = SpudverseColors;
 
 export default function Home() {
   // The userAuth hooks provides authentication state
