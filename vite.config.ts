@@ -159,6 +159,7 @@ export default defineConfig({
       "@": path.resolve(import.meta.dirname, "client", "src"),
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+      "@chromatic-concordance/shared-core": path.resolve(import.meta.dirname, "shared-core", "src"),
     },
   },
   envDir: path.resolve(import.meta.dirname),
