@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -303,7 +303,7 @@ export default function Onboarding() {
                         style={{ 
                           borderTop: `3px solid ${rel.color}`,
                           ...(isHovered && { 
-                            boxShadow: `0 0 20px ${rel.color}40` 
+                            boxShadow: `0 0 20px color-mix(in oklch, ${rel.color} 25%, transparent)` 
                           })
                         }}
                       >
@@ -466,7 +466,7 @@ export default function Onboarding() {
                       <div className="space-y-2">
                         <h4 className="font-medium">Data Color</h4>
                         <p className="text-sm text-muted-foreground">
-                          Visual indicator: empathy (teal), logic (yellow), concordance (cyan), neutral (gray).
+                          Visual indicator for data streams (empathy, logic, concordance, or neutral).
                         </p>
                       </div>
                     </div>
