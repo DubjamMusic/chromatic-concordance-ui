@@ -30,7 +30,7 @@ const relationshipTypes: Array<{
   name: string;
   description: string;
   color: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; style?: React.CSSProperties }>;
   useCase: string;
 }> = [
   {
@@ -44,10 +44,10 @@ const relationshipTypes: Array<{
   {
     type: "empathy-link",
     name: "Empathy Link",
-    description: "Emotional resonance connection that enables recovery stability monitoring and empathetic responses.",
+    description: "A people-and-context connection that captures collaboration signals and qualitative evidence.",
     color: colors.empathy,
     icon: Heart,
-    useCase: "Monitors user's emotional state and recovery metrics in Potato Planet realm"
+    useCase: "Captures qualitative evidence and collaboration context for a capability map"
   },
   {
     type: "logic-link",
@@ -63,7 +63,7 @@ const relationshipTypes: Array<{
     description: "The synthesis connection that merges empathy and logic data into unified insights and recommendations.",
     color: colors.concordance,
     icon: Sparkles,
-    useCase: "Generates personalized recommendations by combining recovery + skill data"
+    useCase: "Generates explainable next actions by combining evidence, skills, and dependencies"
   },
   {
     type: "void-connection",
@@ -113,7 +113,7 @@ const flowDirections: Array<{
   direction: FlowDirection;
   name: string;
   description: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; style?: React.CSSProperties }>;
 }> = [
   {
     direction: "unidirectional",
@@ -206,7 +206,7 @@ export default function Onboarding() {
                         <Heart className="w-8 h-8 mb-2" style={{ color: colors.empathy }} />
                         <h3 className="font-semibold mb-1">Empathy</h3>
                         <p className="text-sm text-muted-foreground">
-                          Monitor recovery stability and emotional well-being
+                          Capture context, evidence, and collaboration signals
                         </p>
                       </div>
                       <div 
@@ -249,7 +249,7 @@ export default function Onboarding() {
                       <div>
                         <p className="font-medium">Holistic Recovery Support</p>
                         <p className="text-sm text-muted-foreground">
-                          By connecting recovery metrics with gameplay data, we provide better support
+                          By connecting evidence with capability data, teams can see what is known and missing
                         </p>
                       </div>
                     </div>
