@@ -1,6 +1,7 @@
-import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { SpudverseColors } from "@chromatic-concordance/shared-core";
+
+type Accent = "empathy" | "logic" | "concordance";
 
 type Slide = {
   id: string;
@@ -8,19 +9,19 @@ type Slide = {
   kicker?: string;
   subtitle?: string;
   highlights: string[];
-  accent?: keyof typeof SpudverseColors;
+  accent?: Accent;
 };
 
 const slides: Slide[] = [
   {
     id: "intro",
-    title: "HustleCodex ML-Toolkit",
-    subtitle: "Predictive Analytics Engine — Integration Complete",
-    kicker: "v1.0.0 • January 2026 • Executive Summary",
+    title: "Capability Readiness Brief",
+    subtitle: "A transparent decision-support prototype for AI teams",
+    kicker: "Prototype • Product direction • Evidence-led",
     highlights: [
-      "DEEPDIVE Stack now live in production",
-      "Real-time predictive insights replace manual analysis",
-      "Automated pathways unlock new revenue streams",
+      "Map capabilities, dependencies, evidence, and risks",
+      "Surface gaps and next actions with visible context",
+      "Export a concise brief for a team or client workshop",
     ],
     accent: "concordance",
   },
@@ -28,9 +29,9 @@ const slides: Slide[] = [
     id: "gap",
     title: "The Gap in Our Analytics Stack",
     highlights: [
-      "Before: Manual Analysis • Avg Insight Delay: 72 hours • Predictive Coverage: 0%",
-      "Business Impact: Missed Opportunities • Reactive Decisions • User Churn",
-      "Target: Shift to proactive, real-time predictions with automated intervention",
+      "Before: fragmented notes, spreadsheets, and unclear ownership",
+      "Business impact: slow decisions, duplicated work, and hidden dependencies",
+      "Target: one shared map with explicit evidence and follow-up actions",
     ],
     accent: "empathy",
   },
@@ -38,10 +39,10 @@ const slides: Slide[] = [
     id: "stack",
     title: "What We Built: The DEEPDIVE Stack",
     highlights: [
-      "DEEPDIVE Agent: AI orchestrator for command interpretation & pipeline coordination",
-      "mlBox Router: tRPC API layer for analysis execution and result delivery",
-      "ML Pipeline: Python ensemble (RandomForest + Gradient Boosting) powering predictive analytics",
-      "Integration Flow: invoke → route → ensemble inference → return results",
+      "Relationship model: typed connections between capabilities and initiatives",
+      "Readiness view: transparent indicators for evidence, risk, and ownership",
+      "Action layer: turn identified gaps into a short, reviewable next-action list",
+      "Integration path: map → explain → decide → export",
     ],
     accent: "logic",
   },
@@ -49,30 +50,30 @@ const slides: Slide[] = [
     id: "value",
     title: "Immediate Business Value",
     highlights: [
-      "90% Model Accuracy: reliable intervention strategies & personalized guidance",
-      "Automated Revenue Mapping: maps user experience/skills to market value projections",
-      "Projected 20% Retention Uplift from proactive, data-driven interventions",
+      "Shared language: align product, operations, and enablement conversations",
+      "Explainability: show the evidence behind every readiness signal",
+      "Practical output: leave a workshop with a brief and owned next steps",
     ],
     accent: "concordance",
   },
   {
     id: "pathway",
-    title: "Financial Freedom Pathway (12-Month Projection)",
+    title: "Capability Growth Pathway",
     highlights: [
-      "Revenue ramp: $9,552 (Month 1) → $158,900 (Month 12) • +1,563%",
-      "Stages: Base → Adept → Mentor with compounding expertise value",
-      "Roles: AI Specialist (high demand, $145k+ avg salary) • Web3 Architect (decentralized, $180/hr potential)",
+      "Stages: baseline → evidence → practice → review",
+      "Each stage records what is known, what is missing, and who owns the next step",
+      "No financial or career outcome is inferred from the map",
     ],
     accent: "empathy",
   },
   {
     id: "milestones",
-    title: "Immediate Milestones: Q1 2026",
+    title: "Immediate beta milestones",
     highlights: [
-      "Feb 2026: Launch Revenue Dashboard",
-      "Mar 2026: Dual-Track Curriculum for AI Specialists & Web3 Architects",
-      "Apr 2026: Real-Time Market Feed via live job market APIs",
-      "System Status: Execution Phase Active",
+      "Milestone 1: persistent capability and relationship maps",
+      "Milestone 2: exportable readiness brief with evidence labels",
+      "Milestone 3: narrowly scoped AI suggestions with source context",
+      "System status: prototype; validation required before production claims",
     ],
     accent: "logic",
   },
@@ -80,10 +81,10 @@ const slides: Slide[] = [
     id: "roadmap",
     title: "Strategic Roadmap",
     highlights: [
-      "Production Rollout: immediate deployment & configuration",
-      "Automation Cycle: daily analysis rhythms and continuous insights",
-      "Monetization: Financial Freedom Score, Career Path Simulator, Premium Subscriptions",
-      "Prompt: EXECUTE_PRODUCTION_DEPLOYMENT?",
+      "Validate: five buyer conversations and one paid workshop",
+      "Build: persistence, permissions, export, and an audit-friendly history",
+      "Package: workshop kit first, team workspace second, embedded intelligence later",
+      "Prompt: REVIEW_EVIDENCE_AND_NEXT_ACTIONS",
     ],
     accent: "concordance",
   },
@@ -92,17 +93,11 @@ const slides: Slide[] = [
 export default function MLToolkitDeck() {
   const colors = SpudverseColors;
 
-  const accentMap = useMemo(
-    () => ({
-      empathy: colors.empathy,
-      logic: colors.logic,
-      concordance: colors.concordance,
-      jellybod: colors.jellybod,
-      "jellybod-glow": colors["jellybod-glow"],
-      "concordance-glow": colors["concordance-glow"],
-    }),
-    [colors],
-  );
+  const accentMap: Record<Accent, string> = {
+    empathy: colors.empathy,
+    logic: colors.logic,
+    concordance: colors.concordance,
+  };
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
