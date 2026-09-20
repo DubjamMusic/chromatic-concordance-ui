@@ -1,0 +1,45 @@
+{
+  "figureId": "spectrum-binder",
+  "codename": "SPECTRUM-BINDER-14",
+  "waveId": "2026-09-20-e-ember",
+  "repo": "DubjamMusic/chromatic-concordance-ui",
+  "surfaces": [
+    {
+      "id": "empathy-matrix",
+      "path": "client/src/components/EmpathyMatrix.tsx",
+      "role": "visualize cross-realm empathy links"
+    },
+    {
+      "id": "realm-panel",
+      "path": "client/src/components/RealmPanel.tsx",
+      "role": "list active realms"
+    },
+    {
+      "id": "quest-objective",
+      "path": "client/src/components/QuestObjective.tsx",
+      "role": "track quest beats"
+    },
+    {
+      "id": "phase-indicator",
+      "path": "client/src/components/PhaseIndicator.tsx",
+      "role": "show current quest phase"
+    },
+    {
+      "id": "data-stream",
+      "path": "client/src/components/DataStreamVisualizer.tsx",
+      "role": "render live stream ticks"
+    },
+    {
+      "id": "onboarding",
+      "path": "client/src/pages/Onboarding.tsx",
+      "role": "quest intake"
+    },
+    {
+      "id": "ml-toolkit",
+      "path": "client/src/pages/MLToolkitDeck.tsx",
+      "role": "toolkit deck"
+    }
+  ],
+  "forbidden": ["client/src/components/ui"],
+  "lever": "N"
+}
