@@ -1,0 +1,18 @@
+{
+  "figureId": "chroma-warden",
+  "codename": "CHROMA-WARDEN-26",
+  "waveId": "2026-09-26-k-axle",
+  "repo": "DubjamMusic/chromatic-concordance-ui",
+  "role": "Bind the Empathy Matrix tile as a scored concordance card.",
+  "knowledge": [
+    "client/ and shared-core/ are the public face, not this wave's rewrite surface",
+    "Tile is a density card, not a quest UI restyle",
+    "PRODUCT_DIRECTION.md edits stay on a separate issue"
+  ],
+  "sample": {"N": 7.6, "V": 8.4, "S": 8.0, "D": 7.9},
+  "weights": {"N": 0.30, "V": 0.20, "S": 0.20, "D": 0.30},
+  "expectedDensity": 7.925,
+  "bannedTokens": ["planner", "executor", "monitor", "data_agent"],
+  "predecessorNotThisWave": "spectrum-binder",
+  "mergePolicy": "pr-only"
+}
