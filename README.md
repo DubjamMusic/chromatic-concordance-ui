@@ -10,6 +10,7 @@ The current repository contains an immersive visual prototype and a shared domai
 - **Target buyer:** product, operations, enablement, and consulting teams
 - **Next beta milestone:** persistent capability maps, transparent readiness indicators, and exportable briefs
 - **Important limitation:** prediction and recommendation flows are currently simulated and must not be presented as validated production intelligence
+- **Action-figure wave 20261010 (ConcordanceWeaver):** empathy matrix weave stub active; relationship density tracked in prototype mode only
 
 ## Development
 
