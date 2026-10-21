@@ -1,0 +1,11 @@
+{
+  "figure": "spectrum-binder",
+  "wave": "2026-10-21-q-spectrum",
+  "expectedDensity": 8.243,
+  "nodes": 8.4,
+  "velocity": 7.8,
+  "streak": 8.1,
+  "decision": 8.7,
+  "banned": ["planner", "executor", "monitor", "data_agent", "planner-alpha", "executor-beta"],
+  "gate": "pr-only"
+}
